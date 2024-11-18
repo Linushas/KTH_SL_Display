@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'DIN1451';
+    src: url('./fonts/DIN1451.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'DIN1451', sans-serif;
+    image-rendering: pixelated;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(134, 205, 134, 0.1);
+
+    color: #000;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#app {
+    width: 100%;
+    background: #384533;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    box-shadow: 0 0 200px rgba(134, 205, 134, 0.1);
+}
+
+td {
+    font-size: 80px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    text-align: left;
+}
+
+#line {
+    padding-left: 20px;
+}
+
+#display {
+    text-align: right;
+    padding-right: 40px;
+}
