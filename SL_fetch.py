@@ -4,14 +4,11 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # För att möjliggöra anrop från olika origin
+CORS(app)
 
 url = "https://transport.integration.sl.se/v1/sites/"
 site = "7000" # Huddinge Sjukhus
 fullUrl = url + site + "/departures"
-
-response = requests.get(fullUrl)
-eventData = response.json()
 
 @app.route('/getBusData', methods=['GET'])
 def getBusData():
