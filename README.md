@@ -10,4 +10,4 @@
 Note: *script.js* will fetch new data every minute.
 
 **Preview:**
-![preview_image](./images/preview)
+![preview_image](./images/preview.png)
