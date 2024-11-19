@@ -55,11 +55,27 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Error fetching data:", error));
     }
 
+    function updateStyle(){
+        if(state < 2){
+            document.body.style.setProperty("--text-color", "#000");
+            document.body.style.setProperty("--background-color", "#384533");
+            document.body.style.setProperty("--gradient-color", "rgba(134, 205, 134, 0.1)");
+            document.body.style.setProperty("--text-shadow", "rgba(134, 205, 134, 0.1)");
+        }
+        else if(state >= 2 && state < 4){
+            document.body.style.setProperty("--text-color", "#f3c325");
+            document.body.style.setProperty("--background-color", "#000");
+            document.body.style.setProperty("--gradient-color", "#000");
+            document.body.style.setProperty("--text-shadow", "rgba(255, 208, 0, 0.2);");
+        }
+    }
+
+    updateStyle();
     fetchAndUpdateData();
 
-    //setInterval(() => updateTable(), 4000);
     setInterval(() => {
         state = (state + 1) % 4;
+        updateStyle();
         updateTable();
     }, 8000);
     setInterval(fetchAndUpdateData, 60000);

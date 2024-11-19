@@ -1,3 +1,13 @@
+:root {
+    --text-color: #f3c325; /*#000*/
+    --background-color: #000; /*#384533*/
+    --gradient-color: #000; /*rgba(134, 205, 134, 0.1)*/
+    --text-shadow: rgba(255, 208, 0, 0.2);
+    --text-size: 40px; /*100px*/
+    --text-padding: 60px; /*45px*/
+    --font: 'Triple Dot Digital', sans-serif; /*'DIN1451', sans-serif*/
+}
+
 @font-face {
     font-family: 'DIN1451';
     src: url('./fonts/DINEngschriftStd.otf') format('truetype');
@@ -5,13 +15,20 @@
     font-style: normal;
 }
 
-body {
-    font-family: 'DIN1451', sans-serif;
-    image-rendering: pixelated;
-    font-weight: 700;
-    text-shadow: 0 0 20px rgba(134, 205, 134, 0.1);
+@font-face {
+    font-family: 'Triple Dot Digital';
+    src: url('./fonts/triple_dot_digital-7.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-    color: #000;
+body {
+    background: var(--background-color);
+    font-family: var(--font);
+    font-weight: 700;
+    image-rendering: pixelated;
+    text-shadow: 0 0 20px var(--text-shadow);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -19,60 +36,35 @@ body {
 
 #app {
     width: 100%;
-    background: #384533;
+    background: var(--background-color);
     overflow: hidden;
-}
-
-h {
-    font-size: 50px;
-    padding-left: 268px;
-    color: white;
-    font-weight: 500;
-    box-shadow: 0 0 200px rgba(134, 205, 134, 0.1);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    background: #384533;
+    background: var(--background-color);
 }
 
 tr {
-    box-shadow: 0 0 200px rgba(134, 205, 134, 0.1);
+    box-shadow: 0 0 200px var(--gradient-color);
 }
 
 td {
     position: relative;
-    font-size: 100px;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    font-size: var(--text-size);
+    padding-top: var(--text-padding);
+    padding-bottom: var(--text-padding);
+    color: var(--text-color);
     text-align: left;
 }
 
 #line {
-    padding-left: 20px;
+    padding-left: 40px;
 }
 
 #display {
     text-align: right;
-    padding-right: 40px;
-}
-
-.scroll-message {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    animation: scroll-message 5s linear infinite;
-    display: inline-block; /* Ensures animation applies */
-    max-width: 200px; /* Adjust as needed for your table layout */
-}
-
-@keyframes scroll-message {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+    padding-right: 50px;
 }
 
