@@ -8,6 +8,3 @@
 3. Toggle fullscreen on
 
 Note: *script.js* will fetch new data every minute.
-
-**Preview:**
-![preview_image](./images/preview.png)
