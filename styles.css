@@ -47,3 +47,7 @@ td {
     text-align: right;
     padding-right: 40px;
 }
+
+#message {
+    padding-left: 20px;
+}
