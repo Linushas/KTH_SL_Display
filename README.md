@@ -26,4 +26,5 @@ python pip install requests, flask, flask_cors
 Note: *script.js* will fetch new data every minute.
 
 ### Preview
-![](./res/preview.mp4)
+https://github.com/user-attachments/assets/cb67fc00-34ff-4fa9-85af-d264905d4304
+
