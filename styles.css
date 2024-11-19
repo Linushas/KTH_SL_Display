@@ -10,14 +10,14 @@
 
 @font-face {
     font-family: 'DIN1451';
-    src: url('./fonts/DINEngschriftStd.otf') format('truetype');
+    src: url('./res/fonts/DINEngschriftStd.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Triple Dot Digital';
-    src: url('./fonts/triple_dot_digital-7.ttf') format('truetype');
+    src: url('./res/fonts/triple_dot_digital-7.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

@@ -24,3 +24,6 @@ python pip install requests, flask, flask_cors
 - or you can use the powershell script: *runApp.ps1*
 
 Note: *script.js* will fetch new data every minute.
+
+### Preview
+![](./res/preview.mp4)
