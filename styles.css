@@ -23,9 +23,18 @@ body {
     overflow: hidden;
 }
 
+h {
+    font-size: 50px;
+    padding-left: 268px;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 0 200px rgba(134, 205, 134, 0.1);
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
+    background: #384533;
 }
 
 tr {
@@ -33,9 +42,10 @@ tr {
 }
 
 td {
-    font-size: 80px;
-    padding-top: 90px;
-    padding-bottom: 90px;
+    position: relative;
+    font-size: 100px;
+    padding-top: 45px;
+    padding-bottom: 45px;
     text-align: left;
 }
 
@@ -48,6 +58,21 @@ td {
     padding-right: 40px;
 }
 
-#message {
-    padding-left: 20px;
+.scroll-message {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    animation: scroll-message 5s linear infinite;
+    display: inline-block; /* Ensures animation applies */
+    max-width: 200px; /* Adjust as needed for your table layout */
 }
+
+@keyframes scroll-message {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
