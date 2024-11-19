@@ -1,2 +1,2 @@
 start "index.html"
-py SL_fetch.py
+py server/SL_fetch.py

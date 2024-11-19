@@ -69,9 +69,39 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.style.setProperty("--text-shadow", "rgba(255, 208, 0, 0.2);");
         }
     }
-
+    
     updateStyle();
     fetchAndUpdateData();
+
+    function playSound(){
+        let voices = window.speechSynthesis.getVoices();
+        let selectedVoice = voices.find(voice => voice.name === "Microsoft Sofie Online (Natural) - Swedish (Sweden)");
+
+        busData.forEach(item => {
+            var msg = new SpeechSynthesisUtterance();
+            msg.voice = selectedVoice;
+            msg.rate = 1;
+            msg.pitch = 1;
+            msg.text = "Buss " + item.line + " mot " + item.destination + " anländer om " + item.display;
+            window.speechSynthesis.speak(msg);
+        });
+    }
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowRight") {
+            state = (state + 1) % 4;
+            updateStyle();
+            updateTable();
+        }
+        if (event.key === "ArrowLeft") {
+            state = (state == 0) ? 3 : (state - 1);
+            updateStyle();
+            updateTable();
+        }
+        if (event.key === " ") { 
+            playSound();
+        }
+    });
 
     setInterval(() => {
         state = (state + 1) % 4;
