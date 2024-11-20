@@ -3,9 +3,9 @@
     --background-color: #384533;
     --gradient-color: #000; /*rgba(134, 205, 134, 0.1)*/
     --text-shadow: rgba(255, 208, 0, 0.2);
-    --text-size: 45px; /*100px*/
+    --text-size: 45px; /*140px*/
     --text-padding: 80px; /*45px*/
-    --font: 'Triple Dot Digital', sans-serif; /*'DIN1451', sans-serif*/
+    --font: 'Triple Dot Digital', sans-serif; /*'DIN1451', sans-serif*/ 
 }
 
 @font-face {

@@ -75,12 +75,18 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.style.setProperty("--background-color", "#384533");
             document.body.style.setProperty("--gradient-color", "rgba(134, 205, 134, 0.1)");
             document.body.style.setProperty("--text-shadow", "rgba(134, 205, 134, 0.1)");
+            document.body.style.setProperty("--font", "'DIN1451', sans-serif");
+            document.body.style.setProperty("--text-size", "100px");
+            document.body.style.setProperty("--text-padding", "74px");
         }
         else if(state >= 2 && state < 4){
             document.body.style.setProperty("--text-color", "#f3c325");
             document.body.style.setProperty("--background-color", "#000");
             document.body.style.setProperty("--gradient-color", "#000");
             document.body.style.setProperty("--text-shadow", "rgba(255, 208, 0, 0.2);");
+            document.body.style.setProperty("--font", "'Triple Dot Digital', sans-serif");
+            document.body.style.setProperty("--text-size", "45px");
+            document.body.style.setProperty("--text-padding", "80px");
         }
     }
     
