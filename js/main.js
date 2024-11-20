@@ -8,22 +8,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const stopGroups = {
         0: ["A", "B", "C", "D"],
         1: ["E", "F", "G"],
-        2: ["1", "2"],
-        3: ["3", "4", "5"]
+        2: ["4"],
+        3: ["5"]
     };
 
     function createRow(data, isMessageRow) {
         const row = document.createElement("tr");
-        if (isMessageRow) {
-            row.innerHTML = `<td colspan="4" class="scroll-message">${data.message}</td>`;
-        } else {
-            row.innerHTML = `
-                <td id="line">${data.line || "-"}</td>
-                <td id="destination">${data.destination}</td>
-                <td id="stop">${data.stop}</td>
-                <td id="display">${data.display}</td>
-            `;
+        if(state < 2){
+            if (isMessageRow) {
+                row.innerHTML = `<td colspan="4" class="scroll-message">${data.message}</td>`;
+            } else {
+                row.innerHTML = `
+                    <td id="line">${data.line || "-"}</td>
+                    <td id="destination">${data.destination}</td>
+                    <td id="stop">${data.stop}</td>
+                    <td id="display">${data.display}</td>
+                `;
+            }
         }
+        else{
+            if (isMessageRow) {
+                row.innerHTML = `<td colspan="4" class="scroll-message">${data.message}</td>`;
+            } else {
+                row.innerHTML = `
+                    <td id="line">${data.line || "-"}</td>
+                    <td id="destination">${data.destination}</td>
+                    <td id="display">${data.display}</td>
+                `;
+            }
+        }
+        
         return row;
     }
 
