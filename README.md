@@ -1,6 +1,11 @@
 ### Dependencies
 Python libraries:
-![](./requirements.txt)
+[Link](requirements.txt)
+```
+requests==2.31.0
+Flask==3.0.0
+Flask-Cors==5.0.0
+```
 
 ### How to use
 1. Start server: run *SL_fetch.py*
