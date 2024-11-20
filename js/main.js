@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const row = document.createElement("tr");
         if(state < 2){
             if (isMessageRow) {
-                const scrollSpeed = Math.max(10, data.message.length / 10); // Justera hastighet efter meddelandelängd.
+                const scrollSpeed = Math.max(10, data.message.length / 10);
                 row.innerHTML = `
                     <td colspan="4" class="scroll-message">
                         <span class="scrolling" style="animation-duration: ${scrollSpeed}s;">
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         else{
             if (isMessageRow) {
-                const scrollSpeed = Math.max(10, data.message.length / 10); // Justera hastighet efter meddelandelängd.
+                const scrollSpeed = Math.max(10, data.message.length / 10);
                 row.innerHTML = `
                     <td colspan="4" class="scroll-message">
                         <span class="scrolling" style="animation-duration: ${scrollSpeed}s;">
@@ -86,9 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.style.setProperty("--background-color", "#384533");
             document.body.style.setProperty("--gradient-color", "rgba(134, 205, 134, 0.1)");
             document.body.style.setProperty("--text-shadow", "rgba(134, 205, 134, 0.1)");
-            document.body.style.setProperty("--font", "'DIN1451', sans-serif");
-            document.body.style.setProperty("--text-size", "100px");
-            document.body.style.setProperty("--text-padding", "74px");
+            document.body.style.setProperty("--font", "'Triple Dot Digital', sans-serif");
+            document.body.style.setProperty("--text-size", "45px");
+            document.body.style.setProperty("--text-padding", "80px");
         }
         else if(state >= 2 && state < 4){
             document.body.style.setProperty("--text-color", "#f3c325");

@@ -47,7 +47,10 @@ table {
 }
 
 tr {
+    width: 100%;
+    max-height: 10px;
     box-shadow: 0 0 200px var(--gradient-color);
+    overflow: hidden;
 }
 
 td {
@@ -57,6 +60,8 @@ td {
     padding-bottom: var(--text-padding);
     color: var(--text-color);
     text-align: left;
+    overflow: hidden; 
+    white-space: nowrap;
 }
 
 #line {
@@ -64,8 +69,12 @@ td {
 }
 
 #display {
+    width: 15%;
     text-align: right;
     padding-right: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 /* SCROLL */
