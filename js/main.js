@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         0: ["A", "B", "C", "D"],
         1: ["E", "F", "G"],
         2: ["1", "2"],
-        3: ["3", "4"]
+        3: ["3", "4", "5"]
     };
 
     function createRow(data, isMessageRow) {
