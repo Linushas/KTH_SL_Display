@@ -1,7 +1,7 @@
 ### Dependencies
-    Python libraries:
-      - requests, flask, flask_cors
-  
+Python libraries:
+![](./requirements.txt)
+
 ### How to use
 1. Start server: run *SL_fetch.py*
 2. Open *index.html* in a browser
