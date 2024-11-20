@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     const tableBody = document.getElementById("bus-data");
-    let showOnlyMessages = false;
     let state = 0;
     let busData = [];
     let trainData = [];
@@ -16,7 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const row = document.createElement("tr");
         if(state < 2){
             if (isMessageRow) {
-                row.innerHTML = `<td colspan="4" class="scroll-message">${data.message}</td>`;
+                const scrollSpeed = Math.max(10, data.message.length / 10); // Justera hastighet efter meddelandelängd.
+                row.innerHTML = `
+                    <td colspan="4" class="scroll-message">
+                        <span class="scrolling" style="animation-duration: ${scrollSpeed}s;">
+                            ${data.line || "-"} ${data.destination} : ${data.display} - ${data.message}
+                        </span>
+                    </td>`;
             } else {
                 row.innerHTML = `
                     <td id="line">${data.line || "-"}</td>
@@ -28,7 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         else{
             if (isMessageRow) {
-                row.innerHTML = `<td colspan="4" class="scroll-message">${data.message}</td>`;
+                const scrollSpeed = Math.max(10, data.message.length / 10); // Justera hastighet efter meddelandelängd.
+                row.innerHTML = `
+                    <td colspan="4" class="scroll-message">
+                        <span class="scrolling" style="animation-duration: ${scrollSpeed}s;">
+                            ${data.line || "-"} ${data.destination} : ${data.display} - ${data.message}
+                        </span>
+                    </td>`;
             } else {
                 row.innerHTML = `
                     <td id="line">${data.line || "-"}</td>
@@ -49,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         currentData.forEach(item => {
             if (currentStops.includes(item.stop)) {
-                const isMessageRow = showOnlyMessages && item.message !== "null";
+                const isMessageRow = item.message !== "null";
                 const row = createRow(item, isMessageRow);
                 tableBody.appendChild(row);
             }
