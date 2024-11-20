@@ -1,6 +1,8 @@
 ### Dependencies
 Python libraries:
-![](./requirements.txt)
+```requirements.txt [1]
+
+```
 
 ### How to use
 1. Start server: run *SL_fetch.py*
