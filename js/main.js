@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateStyle(){
         if(state < 2){
             document.body.style.setProperty("--text-color", "#000");
-            document.body.style.setProperty("--background-color", "#384533");
+            document.body.style.setProperty("--background-color", "#586553");
             document.body.style.setProperty("--gradient-color", "rgba(134, 205, 134, 0.1)");
             document.body.style.setProperty("--text-shadow", "rgba(134, 205, 134, 0.1)");
             document.body.style.setProperty("--font", "'Triple Dot Digital', sans-serif");
